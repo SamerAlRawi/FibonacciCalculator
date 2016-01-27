@@ -9,7 +9,7 @@ app.controller("mainController", function ($scope, $http) {
     }
 
     $scope.calculate = function () {
-        $http.get('Fibonacci/Calculate?number=' + $scope.number).
+        $http.get('/Fibonacci/Calculate?number=' + $scope.number).
             success(function (data) {
                 $scope.result = data;
                 $scope.refreshCalculations();
@@ -20,7 +20,7 @@ app.controller("mainController", function ($scope, $http) {
     }
 
     $scope.refreshCalculations = function () {
-        $http.get('Fibonacci/GetCalculations').
+        $http.get('/Fibonacci/GetCalculations').
             success(function (data) {
                 $scope.calculations = data;
             }).
