@@ -4,7 +4,7 @@ simple single page Fibonacci calculator
 # Used technologies
     angularjs
     Asp.net MVC
-    CSS
+    Bootstrap CSS
 
 # Implementation steps
     Created the front-end javascript angular application and controller.
