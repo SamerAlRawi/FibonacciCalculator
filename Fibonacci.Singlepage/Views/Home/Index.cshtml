@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci</title>
+    <script type="text/javascript" src="~/Scripts/angular.min.js"></script>
+    <link type="text/css" href="~/Content/bootstrap.css" rel="stylesheet"></link>
+    <link type="text/css" href="~/Content/Site.css" rel="stylesheet"></link>
+    <script type="text/javascript" src="~/Scripts/app.js"></script>
+</head>
+<body ng-app="fibonacci">
+
+    <h2>Fibonacci</h2>
+
+    <div class="container-fluid" ng-controller="mainController">
+        <div class="col-lg-6">
+            <div class="row">
+                <input type="number" placeholder="enter number" ng-model="number" class="input-lg" pattern="[0-9]+" ng-pattern-restrict></input>
+
+                <button ng-click="calculate()" ng-disabled="numberIsValid()" class="btn-lg btn-info">Calculate</button>
+            </div>
+            <div class="result-container">
+                <div class="row" ng-if="result.FibonacciNumber">
+                    <span class="text-info input-lg text-primary">{{result.Number}}</span>
+                    <span class="text-info input-lg text-primary">, </span>
+                    <span class="text-info input-lg text-primary">{{result.FibonacciNumber}}</span>
+                </div>
+            </div>
+            <div class="row text-info" ng-if="(calculations.length>0)">
+                <h3>Last 10 Numbers</h3>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <td>Number</td>
+                        <td>Fibonacci Number</td>
+                        <td>Ip Address</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="calculation in calculations">
+                        <td>{{calculation.Number}}</td>
+                        <td>{{calculation.FibonacciNumber}}</td>
+                        <td>{{calculation.IpAddress}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

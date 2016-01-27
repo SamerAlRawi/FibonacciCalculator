@@ -1,0 +1,17 @@
+﻿body {
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color:#fff;
+}
+
+.ng-invalid {
+    color: #f00;
+}
+.ng-invalid {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+.result-container {
+    padding: 10px;
+    height: 40px;
+}
