@@ -1,5 +1,5 @@
 # FibonacciCalculator
-simple single page Fibonacci calculator
+simple single page Fibonacci calculator using MVC and angular
 
 # Used technologies
     angularjs
